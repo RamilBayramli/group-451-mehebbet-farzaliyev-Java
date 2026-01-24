@@ -3,19 +3,17 @@ package classwork_1;
 public class Classwork_1 {
 	 public static void main(String[] args) {
 		 //1
-	        int[] numbers = {1, 2, 3, 4, 5};
-	        for (int i = 0; i < numbers.length; i++) {
-	            System.out.print(numbers[i] + " ");
+		 for (int i = 1; i <= 10; i++) {
+	            System.out.println("6 × " + i + " = " + (6 * i));
 	        }
-	
-	 //2
-     //?
-	 //3
-	        int[] numbers = {5, 2, 8, 3, 5, 1};
-	        int sum = numbers[0] + numbers[1] + numbers[2];
-	        System.out.println("Сумма первых трёх чисел: " + sum);
+		 //2
+		 int sum = n * (n + 1) / 2;
+	        System.out.println("Сумма чисел от 1 до " + n + " = " + sum);
+
 	    }
 	}
+
+
 
 
 
