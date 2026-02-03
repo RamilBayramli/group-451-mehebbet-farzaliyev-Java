@@ -1,117 +1,124 @@
-package classwork_1;
-public static void main(String[] args) {
-	//1
+public class Main {
+    public static void main(String[] args) {
+
+        class Cat {
+            String name; int age; String breed;
+            public Cat(String name, int age, String breed) { this.name = name; this.age = age; this.breed = breed; }
+            public void eat() { System.out.println("Cat eating"); }
+            public void sleep() { System.out.println("Cat sleeping"); }
+            public void walk() { System.out.println("Cat walking"); }
+        }
+
+        class Dog {
+            String name; int age; String breed;
+            public Dog(String name, int age, String breed) { this.name = name; this.age = age; this.breed = breed; }
+            public void eat() { System.out.println("Dog eating"); }
+            public void sleep() { System.out.println("Dog sleeping"); }
+            public void walk() { System.out.println("Dog walking"); }
+        }
+
+        class Elephant {
+            String name; int age; String breed;
+            public Elephant(String name, int age, String breed) { this.name = name; this.age = age; this.breed = breed; }
+            public void eat() { System.out.println("Elephant eating"); }
+            public void sleep() { System.out.println("Elephant sleeping"); }
+            public void walk() { System.out.println("Elephant walking"); }
+        }
+
+        class Lion {
+            String name; int age; String breed;
+            public Lion(String name, int age, String breed) { this.name = name; this.age = age; this.breed = breed; }
+            public void eat() { System.out.println("Lion eating"); }
+            public void sleep() { System.out.println("Lion sleeping"); }
+            public void walk() { System.out.println("Lion walking"); }
+        }
+
+        class Rabbit {
+            String name; int age; String breed;
+            public Rabbit(String name, int age, String breed) { this.name = name; this.age = age; this.breed = breed; }
+            public void eat() { System.out.println("Rabbit eating"); }
+            public void sleep() { System.out.println("Rabbit sleeping"); }
+            public void walk() { System.out.println("Rabbit walking"); }
+        }
+
+        class Wolf {
+            String name; int age; String breed;
+            public Wolf(String name, int age, String breed) { this.name = name; this.age = age; this.breed = breed; }
+            public void eat() { System.out.println("Wolf eating"); }
+            public void sleep() { System.out.println("Wolf sleeping"); }
+            public void walk() { System.out.println("Wolf walking"); }
+        }
+
+        class Cow {
+            String name; int age; String breed;
+            public Cow(String name, int age, String breed) { this.name = name; this.age = age; this.breed = breed; }
+            public void eat() { System.out.println("Cow eating"); }
+            public void sleep() { System.out.println("Cow sleeping"); }
+            public void walk() { System.out.println("Cow walking"); }
+        }
+
+        class Tiger {
+            String name; int age; String breed;
+            public Tiger(String name, int age, String breed) { this.name = name; this.age = age; this.breed = breed; }
+            public void eat() { System.out.println("Tiger eating"); }
+            public void sleep() { System.out.println("Tiger sleeping"); }
+            public void walk() { System.out.println("Tiger walking"); }
+        }
+
+        class Horse {
+            String name; int age; String breed;
+            public Horse(String name, int age, String breed) { this.name = name; this.age = age; this.breed = breed; }
+            public void eat() { System.out.println("Horse eating"); }
+            public void sleep() { System.out.println("Horse sleeping"); }
+            public void walk() { System.out.println("Horse walking"); }
+        }
+
+        class Fox {
+            String name; int age; String breed;
+            public Fox(String name, int age, String breed) { this.name = name; this.age = age; this.breed = breed; }
+            public void eat() { System.out.println("Fox eating"); }
+            public void sleep() { System.out.println("Fox sleeping"); }
+            public void walk() { System.out.println("Fox walking"); }
+        }
+
+        class Bear {
+            String name; int age; String breed;
+            public Bear(String name, int age, String breed) { this.name = name; this.age = age; this.breed = breed; }
+            public void eat() { System.out.println("Bear eating"); }
+            public void sleep() { System.out.println("Bear sleeping"); }
+            public void walk() { System.out.println("Bear walking"); }
+        }
+
+        class Monkey {
+            String name; int age; String breed;
+            public Monkey(String name, int age, String breed) { this.name = name; this.age = age; this.breed = breed; }
+            public void eat() { System.out.println("Monkey eating"); }
+            public void sleep() { System.out.println("Monkey sleeping"); }
+            public void walk() { System.out.println("Monkey walking"); }
+        }
+
+        class Panda {
+            String name; int age; String breed;
+            public Panda(String name, int age, String breed) { this.name = name; this.age = age; this.breed = breed; }
+            public void eat() { System.out.println("Panda eating"); }
+            public void sleep() { System.out.println("Panda sleeping"); }
+            public void walk() { System.out.println("Panda walking"); }
+        }
+
+        class Giraffe {
+            String name; int age; String breed;
+            public Giraffe(String name, int age, String breed) { this.name = name; this.age = age; this.breed = breed; }
+            public void eat() { System.out.println("Giraffe eating"); }
+            public void sleep() { System.out.println("Giraffe sleeping"); }
+            public void walk() { System.out.println("Giraffe walking"); }
+        }
+
+        class Zebra {
+            String name; int age; String breed;
+            public Zebra(String name, int age, String breed) { this.name = name; this.age = age; this.breed = breed; }
+            public void eat() { System.out.println("Zebra eating"); }
+            public void sleep() { System.out.println("Zebra sleeping"); }
+            public void walk() { System.out.println("Zebra walking"); }
+        }
+    }
 }
-		 public class Account {
-			    private String owner;
-			    private double balance;
-			    public Account(String owner, double balance) {
-			        this.owner = owner;
-			        this.balance = balance;
-			    }
-			    public void deposit(double amount) {
-			        if (amount > 0) {
-			           balance += amount;
-			            System.out.println("Денег на счет добавлено: " + amount);
-			        } else {
-			            System.out.println("Так столько нельзя добавить");
-			        }
-			    }
-			    public void (double amount) {
-			        if (amount > 0 && amount <= balance) {
-			            balance -= amount;
-			            System.out.println("Со счета снято: " + amount);
-			        } else {
-			            System.out.println("Столько дене у тебя нету чтобы вывести");
-			        }
-			    }
-			    public double getBalance() {
-			        return balance;
-			    }
-			    //2
-			    public class Rectangle {
-			        double width;
-			        double height;
-			        public Rectangle(double width, double height) {
-			            this.width = width;
-			            this.height = height;
-			        }
-			        public double area() {
-			            return width * height;
-			        }
-			        public Rectangle scale(double factor) {
-			            return new Rectangle(width * factor, height * factor);
-			        }
-			    }
-			    //5
-			    class Character {
-			        String name;
-			        int health;
-			        int strength;
-			        public Character(String name, int health, int strength) {
-			            this.name = name;
-			            this.health = health;
-			            this.strength = strength;
-			        }
-			        public Character heal(int value) {
-			            health += value;
-			            return this;
-			        }
-			        public Character train() {
-			            strength += 5;
-			            return this;
-			        }
-			        public void Stats() {
-			            System.out.println(name + " hp: " + health + "  strangeht: " + strength);
-			        }
-			    }
-			    
-			    //6
-			    class Book {
-			        String title;
-			        String author;
-			        int year;
-			        public Book(String title, String author, int year) {
-			            this.title = title;
-			            this.author = author;
-			            this.year = year;
-			        }
-			        public Book(String title, String author) {
-			            this(title, author, 0);
-			        }
-			        public void Info() {
-			          
-			        }
-			    }
-			    //7
-			    class Engine {
-			        int horsepower;
-
-			        public Engine(int horsepower) {
-			            this.horsepower = horsepower;
-			        }
-			    }
-
-			    class Car {
-			        Engine engine;
-			        String model;
-
-			        public Car(String model, Engine engine) {
-			            this.model = model;
-			            this.engine = engine;
-			        }
-			        public void printDetails() {
-			            System.out.println(model + " мощность " + engine.horsepower + " лолшадиные силы.");
-			        }
-			    }
-			}
-		 
-
-
-
-
-
-
-
-
-
