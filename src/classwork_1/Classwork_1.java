@@ -1,124 +1,246 @@
 public class Main {
     public static void main(String[] args) {
+    	//1
+    	class Dragon {
+    	    String name;
+    	    int health;
+    	    double firePower;
+    	    boolean canFly;
 
-        class Cat {
-            String name; int age; String breed;
-            public Cat(String name, int age, String breed) { this.name = name; this.age = age; this.breed = breed; }
-            public void eat() { System.out.println("Cat eating"); }
-            public void sleep() { System.out.println("Cat sleeping"); }
-            public void walk() { System.out.println("Cat walking"); }
-        }
+    	    public Dragon(String name, int health, double firePower, boolean canFly) {
+    	        this.name = name;
+    	        this.health = health;
+    	        this.firePower = firePower;
+    	        this.canFly = canFly;
+    	    }
 
-        class Dog {
-            String name; int age; String breed;
-            public Dog(String name, int age, String breed) { this.name = name; this.age = age; this.breed = breed; }
-            public void eat() { System.out.println("Dog eating"); }
-            public void sleep() { System.out.println("Dog sleeping"); }
-            public void walk() { System.out.println("Dog walking"); }
-        }
+    	    void breatheFire() {
+    	        System.out.println(name + " дышит огнём с силой " + firePower);
+    	    }
 
-        class Elephant {
-            String name; int age; String breed;
-            public Elephant(String name, int age, String breed) { this.name = name; this.age = age; this.breed = breed; }
-            public void eat() { System.out.println("Elephant eating"); }
-            public void sleep() { System.out.println("Elephant sleeping"); }
-            public void walk() { System.out.println("Elephant walking"); }
-        }
+    	    void takeDamage(int damage) {
+    	        health -= damage;
+    	    }
 
-        class Lion {
-            String name; int age; String breed;
-            public Lion(String name, int age, String breed) { this.name = name; this.age = age; this.breed = breed; }
-            public void eat() { System.out.println("Lion eating"); }
-            public void sleep() { System.out.println("Lion sleeping"); }
-            public void walk() { System.out.println("Lion walking"); }
-        }
+    	    boolean isAlive() {
+    	        return health > 0;
+    	    }
+    	}
+    //2
+    	class Vampir {
 
-        class Rabbit {
-            String name; int age; String breed;
-            public Rabbit(String name, int age, String breed) { this.name = name; this.age = age; this.breed = breed; }
-            public void eat() { System.out.println("Rabbit eating"); }
-            public void sleep() { System.out.println("Rabbit sleeping"); }
-            public void walk() { System.out.println("Rabbit walking"); }
-        }
+    	    String name;
+    	    int health;
+    	    double bloodpower;
+    	    boolean canbite;
 
-        class Wolf {
-            String name; int age; String breed;
-            public Wolf(String name, int age, String breed) { this.name = name; this.age = age; this.breed = breed; }
-            public void eat() { System.out.println("Wolf eating"); }
-            public void sleep() { System.out.println("Wolf sleeping"); }
-            public void walk() { System.out.println("Wolf walking"); }
-        }
+    	    public Vampir(String name, int health, double bloodpower, boolean canbite) {
+    	        this.name = name;
+    	        this.health = health;
+    	        this.bloodpower = bloodpower;
+    	        this.canbite = canbite;
+    	    }
 
-        class Cow {
-            String name; int age; String breed;
-            public Cow(String name, int age, String breed) { this.name = name; this.age = age; this.breed = breed; }
-            public void eat() { System.out.println("Cow eating"); }
-            public void sleep() { System.out.println("Cow sleeping"); }
-            public void walk() { System.out.println("Cow walking"); }
-        }
+    	    void takeblood() {
+    	        System.out.println(name + " кусает клыками с силью крови " + bloodpower );
+    	    }
 
-        class Tiger {
-            String name; int age; String breed;
-            public Tiger(String name, int age, String breed) { this.name = name; this.age = age; this.breed = breed; }
-            public void eat() { System.out.println("Tiger eating"); }
-            public void sleep() { System.out.println("Tiger sleeping"); }
-            public void walk() { System.out.println("Tiger walking"); }
-        }
+    	    void takeDamage(int damage) {
+    	        health -= damage;
+    	    }
 
-        class Horse {
-            String name; int age; String breed;
-            public Horse(String name, int age, String breed) { this.name = name; this.age = age; this.breed = breed; }
-            public void eat() { System.out.println("Horse eating"); }
-            public void sleep() { System.out.println("Horse sleeping"); }
-            public void walk() { System.out.println("Horse walking"); }
-        }
+    	    boolean isAlive() {
+    	        return health > 0;
+    	    }
+    	}
+    	//3
+    	class zombie {
 
-        class Fox {
-            String name; int age; String breed;
-            public Fox(String name, int age, String breed) { this.name = name; this.age = age; this.breed = breed; }
-            public void eat() { System.out.println("Fox eating"); }
-            public void sleep() { System.out.println("Fox sleeping"); }
-            public void walk() { System.out.println("Fox walking"); }
-        }
+    	    String name;
+    	    int health;
+    	    double listiningpower;
+    	    boolean Canshout;
 
-        class Bear {
-            String name; int age; String breed;
-            public Bear(String name, int age, String breed) { this.name = name; this.age = age; this.breed = breed; }
-            public void eat() { System.out.println("Bear eating"); }
-            public void sleep() { System.out.println("Bear sleeping"); }
-            public void walk() { System.out.println("Bear walking"); }
-        }
+    	    public zombie(String name, int health, double listiningpower, boolean Canshout) {
+    	        this.name = name;
+    	        this.health = health;
+    	        this.lfirePower;
+    	        this.canFly = canFly;
+    	    }
 
-        class Monkey {
-            String name; int age; String breed;
-            public Monkey(String name, int age, String breed) { this.name = name; this.age = age; this.breed = breed; }
-            public void eat() { System.out.println("Monkey eating"); }
-            public void sleep() { System.out.println("Monkey sleeping"); }
-            public void walk() { System.out.println("Monkey walking"); }
-        }
+    	    void breatheFire() {
+    	        System.out.println(name + " );
+    	    }
 
-        class Panda {
-            String name; int age; String breed;
-            public Panda(String name, int age, String breed) { this.name = name; this.age = age; this.breed = breed; }
-            public void eat() { System.out.println("Panda eating"); }
-            public void sleep() { System.out.println("Panda sleeping"); }
-            public void walk() { System.out.println("Panda walking"); }
-        }
+    	    void takeDamage(int damage) {
+    	        health -= damage;
+    	    }
 
-        class Giraffe {
-            String name; int age; String breed;
-            public Giraffe(String name, int age, String breed) { this.name = name; this.age = age; this.breed = breed; }
-            public void eat() { System.out.println("Giraffe eating"); }
-            public void sleep() { System.out.println("Giraffe sleeping"); }
-            public void walk() { System.out.println("Giraffe walking"); }
-        }
+    	    boolean isAlive() {
+    	        return health > 0;
+    	    }
+    	}
+    	//4
+    	class witch {
 
-        class Zebra {
-            String name; int age; String breed;
-            public Zebra(String name, int age, String breed) { this.name = name; this.age = age; this.breed = breed; }
-            public void eat() { System.out.println("Zebra eating"); }
-            public void sleep() { System.out.println("Zebra sleeping"); }
-            public void walk() { System.out.println("Zebra walking"); }
-        }
+    	    String name;
+    	    int health;
+    	    double CastspeelPower;
+    	    boolean canFly;
+
+    	    public Witch(String name, int health, double CastspeelPower, boolean canFly) {
+    	        this.name = name;
+    	        this.health = health;
+    	        this.CastspeelPower = CastspeelPower ;
+    	        this.canFly = canFly;
+    	    }
+
+    	    void Cursespower() {
+    	        System.out.println(name + " делает проклятие и колдует " + CastspeelPower);
+    	    }
+
+    	    void takeDamage(int damage) {
+    	        health -= damage;
+    	    }
+
+    	    boolean isAlive() {
+    	        return health > 0;
+    	    }
+    	}
+    	//5
+    	class Frankestein {
+
+    	    String name;
+    	    int health;
+    	    double Hittinghamer;
+    	    boolean Sterngtpower;
+
+    	    public Frankestein(String name, int health, double Hitiinghamer, boolean Strenghtpower) {
+    	        this.name = name;
+    	        this.health = health;
+    	        this.Hittinghamer = Hittinghamer;
+    	        this.Sterngtpower = Sterngtpower;
+    	    }
+
+    	    void Hiitwithhammer() {
+    	        System.out.println(name + " Бьет мошно молотком " + Sterngtpower);
+    	    }
+
+    	    void takeDamage(int damage) {
+    	        health -= damage;
+    	    }
+
+    	    boolean isAlive() {
+    	        return health > 0;
+    	    }
+    	}
+    	//7
+    	class Skelet {
+
+    	    String name;
+    	    int health;
+    	    double Shootbowpower;
+    	    boolean Cansawagery;
+
+    	    public Dragon(String name, int health, double Shootbowpower, boolean Cansagery) {
+    	        this.name = name;
+    	        this.health = health;
+    	        this.Shootbowpower = Shootbowpower ;
+    	        this.Cansawagery = Cansawagery;
+    	    }
+
+    	    void Shootarrows() {
+    	        System.out.println(name + " стреялет с лука и меткий " + Shootbowpower);
+    	    }
+
+    	    void takeDamage(int damage) {
+    	        health -= damage;
+    	    }
+
+    	    boolean isAlive() {
+    	        return health > 0;
+    	    }
+    	}
+    	//8
+    	class Robber {
+
+    	    String name;
+    	    int health;
+    	    double Fastpower;
+    	    boolean cankill;
+
+    	    public Dragon(String name, int health, double Fastpower, boolean cankill) {
+    	        this.name = name;
+    	        this.health = health;
+    	        this.Fastpower = Fastpower;
+    	        this.cankill = cankill;
+    	    }
+
+    	    void killpeople() {
+    	        System.out.println(name + " огробляет и убивает мирных жителей " + Fastpower);
+    	    }
+
+    	    void takeDamage(int damage) {
+    	        health -= damage;
+    	    }
+
+    	    boolean isAlive() {
+    	        return health > 0;
+    	    }
+    	}
+    	//9
+    	class Gast {
+
+    	    String name;
+    	    int health;
+    	    double firePower;
+    	    boolean canFly;
+
+    	    public Gast(String name, int health, double firePower, boolean canFly) {
+    	        this.name = name;
+    	        this.health = health;
+    	        this.firePower = firePower;
+    	        this.canFly = canFly;
+    	    }
+
+    	    void breatheFire() {
+    	        System.out.println(name + " кидает огонем и летает " + firePower);
+    	    }
+
+    	    void takeDamage(int damage) {
+    	        health -= damage;
+    	    }
+
+    	    boolean isAlive() {
+    	        return health > 0;
+    	    }
+    	}
+    	//10
+    	class Enderman {
+
+    	    String name;
+    	    int health;
+    	    double Takelandpower;
+    	    boolean canteleport;
+
+    	    public Enderman(String name, int health, double Takelanderpower, boolean canteleport) {
+    	        this.name = name;
+    	        this.health = health;
+    	        this.Takelandpower = Takelandpower;
+    	        this.canteleport = canteleport;
+    	    }
+
+    	    void Teleportstrnght() {
+    	        System.out.println(name + " Телерпортируется и берет блоки " + Takelandpower);
+    	    }
+
+    	    void takeDamage(int damage) {
+    	        health -= damage;
+    	    }
+
+    	    boolean isAlive() {
+    	        return health > 0;
+    	    }
+    	}
     }
-}
+    }
