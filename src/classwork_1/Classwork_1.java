@@ -117,7 +117,36 @@ public class Main {
     	        }
     	    }
     	}
+//4
+    	class Car {
+    	    String brand;
+    	    int speed;
+    	    int fuel;
 
+    	    Car(String brand, int speed, int fuel) {
+    	        this.brand = brand;
+    	        this.speed = speed;
+    	        this.fuel = fuel;
+    	    }
+
+    	    void drive() {
+    	        if (fuel > 0) {
+    	            fuel--;
+    	            System.out.println(brand + " есть топливо идет " + fuel);
+    	        } else {
+    	            System.out.println(brand + " не может идти потомучто нет топливо");
+    	        }
+    	    }
+
+    	    void refuel(int amount) {
+    	        fuel += amount;
+    	        System.out.println(brand + " заправленлен " + fuel);
+    	    }
+
+    	    void showinfo() {
+    	        System.out.println("Бренд: " + brand + ", скорость: " + speed + ", топливо: " + fuel);
+    	    }
+    	}
 
 
 
