@@ -1,96 +1,91 @@
 public class Main {
     public static void main(String[] args) {
-    	//1
-    	int num = sc.nextInt();
-    	if (num % 2 == 0) {
-    	    System.out.println("Четное");
-    	} else {
-    	    System.out.println("Нечетное");
-    	}}
-    //2
-    if (num > 0) {
-        System.out.println("Полож");
-    } else if (num < 0) {
-        System.out.println("Отриц");
-    } else {
-        System.out.println("Ноль");
-    }
-    //3
-    for (int i = 1; i <= 10; i++) {
-        System.out.println("5 x " + i + " = " + (5 * i));
-    }
-    //4
-    int sum = 0;
-    for (int i = 1; i <= 100; i++) {
-        sum += i;
-    }
-    System.out.println(sum);
-}
-  //5
-?
-		//6
-		int count = 0;
-for (int i = 0; i < 10; i++) {
-    int num = sc.nextInt();
-    if (num % 2 == 0) {
-        count++;
-        System.out.println(count);
-    }
-}
-//7
-int A = sc.nextInt();
-int factorial = 1;
-for (int I = 1; i <= n; I++) {
-    factorial *= I;
-    System.out.println(factorial);
-}
-//8
-int Max = sc.nextInt();
+    	//2
+    	class Monster {
+    	    String type;
+    	    int health;
+    	    int damage;
 
-for (int I = 1; i < 5; i++) {
-    int num = sc.nextInt();
-    if (num > max) {
-        max = num;
-        System.out.println(max);
-    }
-}
-//9
-int s = sc.nextInt();
-int r = sc.nextInt();
+    	    Monster(String type, int health, int damage) {
+    	        this.type = type;
+    	        this.health = health;
+    	        this.damage = damage;
+    	    }
 
-for (int i = 0; i < s; i++) {
-    for (int j = 0; j < r; j++) {
-        System.out.print("*");
-    }
-    //10
-    for (int i = 1; i <= 5; i++) {
-        for (int j = 1; j <= i; j++) {
-            System.out.print("*");
-        }
-        System.out.println();
-    }
-    //11
-    int L = sc.nextInt();
-    int sum = 0;
+    	    void attack() {
+    	        System.out.println(type + " атакует " + damage + " наносит урон");
+    	    }
 
-    for (int i = 2; i <= L; i += 2) {
-        sum += i;
-    }
-    System.out.println(sum);
-    //12
-    
-}
-}
+    	    void roar() {
+    	        System.out.println(type + " рычит");
+    	    }
 
+    	    void specialAbility() {
+    	        System.out.println(type + " Использует Ульту и гиперзаярд");
+    	    }
+    	}
+    	
+    	class Firemonster extends Monster {
+    	    Firemonster() {
+    	        super("Огненный монстр", 100, 10);
+    	    }
+    	    void specialAbility() {
+    	        System.out.println("Огненный монстр бьет огнем ");
+    	    }
+    	}
 
-}
-}
+    	class Icemonster extends Monster {
+    	    Icemonster() {
+    	        super("Ледяной монстр", 100, 15);
+    	    }
+    	    void specialAbility() {
+    	        System.out.println(" Ледяной монстр бьет снегом");
+    	    }
+    	}
 
+    	class Poisonmonster extends Monster {
+    	    Poisonmonster() {
+    	        super("Ядовитый монстр", 100, 20);
+    	    }
+    	    void specialAbility() {
+    	        System.out.println(" Ядовитый монстр бьет ядом");
+    	    }
+    	}
 
-}
-}
-}
+    	public class Battle {
+    	    public static void main(String[] args) {
+    	        Monster monster = new Firemonster();
+    	        int monsterhealth = 100;
+    	        int heroDamage = 10;
 
+    	        System.out.println("Герой бьется " + monster.type);
+    	        monster.roar();
+
+    	        while (herohealth > 0 && monster.health > 0) {
+    	            System.out.println("Монстр бьет  " + heroDamage + " наносит урон");
+    	            monster.health -= heroDamage;
+
+    	            if (monster.health <= 0) {
+    	                System.out.println(monster.type + "побежден");
+    	                break;
+    	            }
+
+    	            monster.attack();
+    	            herohealth -= monster.damage;
+    	            monster.specialAbility();
+
+    	            if (herohealth <= 0) {
+    	                System.out.println("Герой умер");
+    	                break;
+    	            }
+
+    	            System.out.println("Здоровье героя: " + herohealth);
+    	            System.out.println("Здоровье монстра: " + monster.health);
+    	        }
+    	    }
+    	}
+    	//3
+    	
 
 
 
