@@ -85,7 +85,38 @@ public class Main {
     	    }
     	}
     	//3
-    	
+    	public class Bankaccount {
+    	    private String owner;
+    	    private double balance;
+
+    	    public Bankaccount(String owner, double balance) {
+    	        this.owner = owner;
+    	        this.balance = balance;
+    	    }
+
+    	    public void deposit(double amount) {
+    	        if (amount > 0) {
+    	            balance += amount;
+    	        }
+    	    }
+
+    	    public void takemoney(double amount) {
+    	        if (amount > 0 && amount <= balance) {
+    	            balance -= amount;
+    	        }
+    	    }
+
+    	    public void showbalance() {
+    	        System.out.println("Баланс: " + balance);
+    	    }
+
+    	    public void push(Bankaccount other, double amount) {
+    	        if (amount > 0 && amount <= balance) {
+    	            this.takemoney(amount);
+    	            other.deposit(amount);
+    	        }
+    	    }
+    	}
 
 
 
