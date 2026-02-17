@@ -1,157 +1,80 @@
 public class Main {
     public static void main(String[] args) {
-    	//2
-    	class Monster {
-    	    String type;
-    	    int health;
-    	    int damage;
+//1
+    	class Superhero {
+    	    String name;
+    	    int powerlevel;
+    	    String secretIdentity;
+    	    boolean isgood;
 
-    	    Monster(String type, int health, int damage) {
-    	        this.type = type;
-    	        this.health = health;
-    	        this.damage = damage;
+    	    Superhero(String name, int powerlevel, String secretIdentity, boolean isgood) {
+    	        this.name = name;
+    	        this.powerlevel = powerlevel;
+    	        this.secretIdentity = secretIdentity;
+    	        this.isgood = isgood;
     	    }
 
-    	    void attack() {
-    	        System.out.println(type + " атакует " + damage + " наносит урон");
+    	    void showheroCard() {
+    	        System.out.println("Имя:" + name + 
+    	                           "Сила:" + powerlevel + 
+    	                           "Секретная личность:" + secretIdentity + 
+    	                           "Добрый герой:" + isgood);
     	    }
 
-    	    void roar() {
-    	        System.out.println(type + " рычит");
+    	    void usePower() {
+    	        System.out.println("Герой " + name + " использует силу  " + powerlevel);
     	    }
 
-    	    void specialAbility() {
-    	        System.out.println(type + " Использует Ульту и гиперзаярд");
-    	    }
-    	}
-    	
-    	class Firemonster extends Monster {
-    	    Firemonster() {
-    	        super("Огненный монстр", 100, 10);
-    	    }
-    	    void specialAbility() {
-    	        System.out.println("Огненный монстр бьет огнем ");
-    	    }
-    	}
-
-    	class Icemonster extends Monster {
-    	    Icemonster() {
-    	        super("Ледяной монстр", 100, 15);
-    	    }
-    	    void specialAbility() {
-    	        System.out.println(" Ледяной монстр бьет снегом");
-    	    }
-    	}
-
-    	class Poisonmonster extends Monster {
-    	    Poisonmonster() {
-    	        super("Ядовитый монстр", 100, 20);
-    	    }
-    	    void specialAbility() {
-    	        System.out.println(" Ядовитый монстр бьет ядом");
-    	    }
-    	}
-
-    	public class Battle {
-    	    public static void main(String[] args) {
-    	        Monster monster = new Firemonster();
-    	        int monsterhealth = 100;
-    	        int heroDamage = 10;
-
-    	        System.out.println("Герой бьется " + monster.type);
-    	        monster.roar();
-
-    	        while (herohealth > 0 && monster.health > 0) {
-    	            System.out.println("Монстр бьет  " + heroDamage + " наносит урон");
-    	            monster.health -= heroDamage;
-
-    	            if (monster.health <= 0) {
-    	                System.out.println(monster.type + "побежден");
-    	                break;
-    	            }
-
-    	            monster.attack();
-    	            herohealth -= monster.damage;
-    	            monster.specialAbility();
-
-    	            if (herohealth <= 0) {
-    	                System.out.println("Герой умер");
-    	                break;
-    	            }
-
-    	            System.out.println("Здоровье героя: " + herohealth);
-    	            System.out.println("Здоровье монстра: " + monster.health);
+    	    void goodorbadchoice() {
+    	        if (isgood && Math.random() > 1) {
+    	            System.out.println(name + " стал злодеем");
+    	            isgood = true; 
     	        }
     	    }
     	}
-    	//3
-    	public class Bankaccount {
-    	    private String owner;
-    	    private double balance;
+//2
+    	class Animal {
+    	    String name;
+    	    int age;
 
-    	    public Bankaccount(String owner, double balance) {
-    	        this.owner = owner;
-    	        this.balance = balance;
+    	    Animal(String name, int age) {
+    	        this.name = name;
+    	        this.age = age;
+    	      
     	    }
 
-    	    public void deposit(double amount) {
-    	        if (amount > 0) {
-    	            balance += amount;
+    	    void sound() {
+    	        System.out.println(name + "мяу");
+    	    }
+//3
+    	   // ?
+    	    		//4
+    	    abstract class Musician {
+    	        String name;
+    	        int experienceyears;
+
+    	        Musician(String name, int experienceyears) {
+    	            this.name = name;
+    	            this.experienceyears = experienceyears;
+    	        }
+    	        abstract void playinstrument();
+    	    }
+//5
+    	    class Book {
+    	        String title;
+    	        String author;
+    	        int year;
+    	        boolean isavailable = true;
+
+    	        Book(String title, String author, int year) {
+    	            this.title = title;
+    	            this.author = author;
+    	            this.year = year;
     	        }
     	    }
 
-    	    public void takemoney(double amount) {
-    	        if (amount > 0 && amount <= balance) {
-    	            balance -= amount;
-    	        }
-    	    }
-
-    	    public void showbalance() {
-    	        System.out.println("Баланс: " + balance);
-    	    }
-
-    	    public void push(Bankaccount other, double amount) {
-    	        if (amount > 0 && amount <= balance) {
-    	            this.takemoney(amount);
-    	            other.deposit(amount);
-    	        }
-    	    }
-    	}
-//4
-    	class Car {
-    	    String brand;
-    	    int speed;
-    	    int fuel;
-
-    	    Car(String brand, int speed, int fuel) {
-    	        this.brand = brand;
-    	        this.speed = speed;
-    	        this.fuel = fuel;
-    	    }
-
-    	    void drive() {
-    	        if (fuel > 0) {
-    	            fuel--;
-    	            System.out.println(brand + " есть топливо идет " + fuel);
-    	        } else {
-    	            System.out.println(brand + " не может идти потомучто нет топливо");
-    	        }
-    	    }
-
-    	    void refuel(int amount) {
-    	        fuel += amount;
-    	        System.out.println(brand + " заправленлен " + fuel);
-    	    }
-
-    	    void showinfo() {
-    	        System.out.println("Бренд: " + brand + ", скорость: " + speed + ", топливо: " + fuel);
-    	    }
-    	}
-
-
-
-
-
+//6
+    	    
 
 
 
