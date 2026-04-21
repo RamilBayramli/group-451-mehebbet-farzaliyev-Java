@@ -1,6 +1,6 @@
 package claswork_4;
 public class Runner {
-public static void main(String[] args) {
+
 	//1
 	int sum = 1;
     if (sum > 0) {
